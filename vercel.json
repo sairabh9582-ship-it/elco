@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "framework": "laravel",
+    "rewrites": [
+        { "source": "/(build|assets|storage|uploads)/(.*)", "destination": "/public/$1/$2" },
+        { "source": "/favicon.ico", "destination": "/public/favicon.ico" },
+        { "source": "/robots.txt", "destination": "/public/robots.txt" },
+        { "source": "/(.*)", "destination": "/api/index.php" }
+    ],
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.1"
+        }
+    }
+}
